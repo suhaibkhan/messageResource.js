@@ -1,0 +1,3 @@
+messageResource.js
+==================
+
