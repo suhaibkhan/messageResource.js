@@ -9,14 +9,14 @@ description = This is a brief description message.
 ```
 ##Basic Usage
 [Clik here](https://raw.githubusercontent.com/suhaibkhan/messageResource.js/master/dist/messageResource.min.js) to download compressed version of messageResource.js.  
-**OR**
+**OR**  
 [Clik here](https://raw.githubusercontent.com/suhaibkhan/messageResource.js/master/dist/messageResource.js) to download uncompressed version of messageResource.js.
-###HTML
+####HTML
 ```html
 <!-- Include messageResource.min.js in the html -->
 <script src="messageResource.min.js"></script>
 ```
-###JavaScript
+####JavaScript
 ```js
 
 // initialize messageResource.js with settings
@@ -35,3 +35,7 @@ messageResource.load('moduleName', callbackFunction);
 var value = messageResource.get('sample.key', 'moduleName');
 
 ```
+## Loading files with locale.
+
+## Copyright
+Copyright 2014 [Suhaib Khan](http://khansuhaib.wordpress.com/). See [MIT-LICENCE](https://github.com/suhaibkhan/messageResource.js/blob/master/LICENSE) for details.
