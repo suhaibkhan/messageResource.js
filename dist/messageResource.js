@@ -387,7 +387,7 @@
 			 * @return {String} Message resource property value if exists else defaultValue passed.
 			 * @public
 			 */
-			get : function(key, module, defaultValue, locale){
+			get : function(key, module, locale, defaultValue){
 				var validModule, 
 					validLocale,
 					moduleObj,
