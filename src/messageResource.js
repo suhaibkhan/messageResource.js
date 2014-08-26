@@ -297,7 +297,7 @@
 			 * @param {Function} callback - Callback to be executed after loading message resource.
 			 * @public
 			 */
-			load : function(module, locale, callback){
+			load : function(module, callback, locale){
 			
 				var fileLocale,
 					validLocale, 
@@ -387,7 +387,7 @@
 			 * @return {String} Message resource property value if exists else defaultValue passed.
 			 * @public
 			 */
-			get : function(key, module, locale, defaultValue){
+			get : function(key, module, defaultValue, locale){
 				var validModule, 
 					validLocale,
 					moduleObj,
