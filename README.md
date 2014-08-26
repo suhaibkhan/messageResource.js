@@ -8,7 +8,9 @@ home.welcome = Welcome Message
 description = This is a brief description message.
 ```
 ##Basic Usage
-[Clik here](dist/messageResource.min.js) to download messageResource.min.js.
+[Clik here](https://raw.githubusercontent.com/suhaibkhan/messageResource.js/master/dist/messageResource.min.js) to download compressed version of messageResource.js.  
+**OR**
+[Clik here](https://raw.githubusercontent.com/suhaibkhan/messageResource.js/master/dist/messageResource.js) to download uncompressed version of messageResource.js.
 ###HTML
 ```html
 <!-- Include messageResource.min.js in the html -->
@@ -19,7 +21,7 @@ description = This is a brief description message.
 
 // initialize messageResource.js with settings
 messageResource.init({
-  // path to directory containing message resource files(.properties file),
+  // path to directory containing message resource files(.properties files),
   // give empty string or discard this configuration if files are in the
   // same directory as that of html file.
   filePath : 'path/messageresource/'
