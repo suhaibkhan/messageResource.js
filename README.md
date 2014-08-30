@@ -132,6 +132,7 @@ File name is constructed with default configuration in different cases as follow
 * case 2 : Module name *HomePage* and locale empty, then file name will be *HomePage.properties*.
 * case 3 : Module name empty and locale *en_US*, then file name will be *_default_en_US.properties*.
 * case 4 : Module name *HomePage* and locale *en_US*, then file name will be *HomePage_en_US.properties*.
+
 ##### Parameters
 **module** *String* | *Array* : Module name or list of module names. Default value is *_default*.  
 **locale** *String* : Locale identifier like en_US. Current locale will be used if not given.  
