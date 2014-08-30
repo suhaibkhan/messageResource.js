@@ -107,5 +107,17 @@ messageResource.init({
 });
 
 ```
+## API
+##### messageResource 
+messageResource variable is added to the global scope.
+##### messageResource.init([config])
+'init' function is used to initialize messageResource.js with configuration options.
+**Parameters** 
+**config** *Object* : Object with configuration options.
+** Available configuration options **
+**filePath** *String* : Path(directory) containing message resource files to be loaded. 
+**fileExtension** *String* : File extension of message resource files.
+##### messageResource.load([module], [locale], [callback])
+Loads a message resource file. The file name is constructed based on the given module name and locale.
 ## Copyright
 Copyright 2014 [Suhaib Khan](http://khansuhaib.wordpress.com/). See [MIT-LICENCE](https://github.com/suhaibkhan/messageResource.js/blob/master/LICENSE) for details.
