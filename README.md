@@ -109,18 +109,22 @@ messageResource.init({
 ```
 ## API
 
-##### messageResource 
+#### messageResource 
 messageResource variable is added to the global scope.
 
-##### messageResource.init([config])
-'init' function is used to initialize messageResource.js with configuration options. 
-**Parameters**  
+#### messageResource.init([config])
+'init' function is used to initialize messageResource.js with configuration options.
+##### Parameters
 **config** *Object* : Object with configuration options.  
-**Available configuration options**  
+##### Available configuration options  
 **filePath** *String* : Path(directory) containing message resource files to be loaded.  
-**fileExtension** *String* : File extension of message resource files.
+**fileExtension** *String* : File extension of message resource files.  
+**defaultLocale** *String* : Default locale to be used.  
+**fileNameResolver** *Function* : Specify custom file name resolver.  
+**ajaxFunction** *Function* : Specify custom ajax function for loading files. The function should accept only 2 arguments url/path of the file and callback with response text as argument.  
+**debugMode** *Boolean* : Enable or disable debug mode.  
 
-##### messageResource.load([module], [locale], [callback])
+#### messageResource.load([module], [locale], [callback])
 Loads a message resource file. The file name is constructed based on the given module name and locale.
 
 ## Copyright
