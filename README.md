@@ -113,19 +113,29 @@ messageResource.init({
 messageResource variable is added to the global scope.
 
 #### messageResource.init([config])
-'init' function is used to initialize messageResource.js with configuration options.
+Initialize messageResource.js with configuration options.
 ##### Parameters
 **config** *Object* : Object with configuration options.  
 ##### Available configuration options  
 **filePath** *String* : Path(directory) containing message resource files to be loaded.  
-**fileExtension** *String* : File extension of message resource files.  
-**defaultLocale** *String* : Default locale to be used.  
-**fileNameResolver** *Function* : Specify custom file name resolver.  
-**ajaxFunction** *Function* : Specify custom ajax function for loading files. The function should accept only 2 arguments url/path of the file and callback with response text as argument.  
-**debugMode** *Boolean* : Enable or disable debug mode.  
+**fileExtension** *String* : File extension of message resource files. Default value is *.properties*.   
+**defaultLocale** *String* : Default locale to be used. Default value is *en_US*.  
+**fileNameResolver** *Function* : Specify custom file name resolver. Default file name resolver will be used if not specified.  
+**ajaxFunction** *Function* : Specify custom ajax function for loading files. The function should accept only 2 arguments, url/path of the file and callback with response text as argument. Default ajax function will be used if not specified.  
+**debugMode** *Boolean* : Enable or disable debug mode. Default value is *false*.
 
 #### messageResource.load([module], [locale], [callback])
 Loads a message resource file. The file name is constructed based on the given module name and locale.
+
+File name is constructed with default configuration in different cases as follows : 
+* case 1 : Module name and locale empty or null, then the file name will be *_default.properties*. 
+* case 2 : Module name *HomePage* and locale empty, then file name will be *HomePage.properties*.
+* case 3 : Module name empty and locale *en_US*, then file name will be *_default_en_US.properties*.
+* case 4 : Module name *HomePage* and locale *en_US*, then file name will be *HomePage_en_US.properties*.
+##### Parameters
+**module** *String* | *Array* : Module name or list of module names. Default value is *_default*.  
+**locale** *String* : Locale identifier like en_US. Current locale will be used if not given.  
+**callback** *Function* : Callback to be executed after loading message resource.
 
 ## Copyright
 Copyright 2014 [Suhaib Khan](http://khansuhaib.wordpress.com/). See [MIT-LICENCE](https://github.com/suhaibkhan/messageResource.js/blob/master/LICENSE) for details.
