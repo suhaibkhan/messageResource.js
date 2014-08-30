@@ -138,9 +138,9 @@ Set current locale to be used. This configured locale will be used by *load* and
 #### messageResource.load([module], [locale], [callback])
 Loads a message resource file. The file name is constructed based on the given module name and locale. File name is constructed with default configuration in different cases as follows : 
 * case 1 : Module name and locale empty or null, then the file name will be *_default.properties*. 
-* case 2 : Module name *HomePage* and locale empty, then file name will be *HomePage.properties*.
+* case 2 : Module name *Home* and locale empty, then file name will be *Home.properties*.
 * case 3 : Module name empty and locale *en_US*, then file name will be *_default_en_US.properties*.
-* case 4 : Module name *HomePage* and locale *en_US*, then file name will be *HomePage_en_US.properties*.
+* case 4 : Module name *Home* and locale *en_US*, then file name will be *Home_en_US.properties*.
 
 ##### Parameters
 **module** *String* | *Array* : Module name or list of module names to be loaded. By Default it loads module with name *_default*.  
