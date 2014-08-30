@@ -115,7 +115,7 @@ messageResource variable is added to the global scope.
 ##### messageResource.init([config])
 'init' function is used to initialize messageResource.js with configuration options. 
 **Parameters**  
-**config** *Object* : Object with configuration options. 
+**config** *Object* : Object with configuration options.  
 **Available configuration options**  
 **filePath** *String* : Path(directory) containing message resource files to be loaded.  
 **fileExtension** *String* : File extension of message resource files.
