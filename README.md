@@ -119,7 +119,7 @@ Initialize messageResource.js with configuration options.
 ##### Parameters
 **config** *Object* : Object with configuration options.  
 ##### Available configuration options  
-**filePath** *String* : Path(directory) containing message resource files to be loaded. Default value is empty string and it points to the same path as that of html file. 
+**filePath** *String* : Path(directory) containing message resource files to be loaded. Default value is empty string and it points to the same path as that of html file.  
 **fileExtension** *String* : File extension of message resource files. Default value is *.properties*.   
 **defaultLocale** *String* : Default locale to be used. Default value is *en_US*.  
 **fileNameResolver** *Function* : Specify custom file name resolver. Default file name resolver will be used if not specified.  
@@ -143,7 +143,7 @@ Loads a message resource file. The file name is constructed based on the given m
 * case 4 : Module name *HomePage* and locale *en_US*, then file name will be *HomePage_en_US.properties*.
 
 ##### Parameters
-**module** *String* | *Array* : Module name or list of module names. Default value is *_default*.  
+**module** *String* | *Array* : Module name or list of module names to be loaded. By Default it loads module with name *_default*.  
 **locale** *String* : Locale identifier like en_US. Current locale will be used as default.  
 **callback** *Function* : Callback to be executed after loading message resource.
 
@@ -155,7 +155,7 @@ Get value of a property from loaded message resource files.
 **key** *String* : Message resource property key.  
 **module** *String* : Module name. Default value is *_default*.  
 **locale** *String* : Locale identifier like en_US. Current locale will be used as default.  
-**defaultValue** *String* : Default value to return if value for the given key not found. By default the given key will be used as default value.  
+**defaultValue** *String* : Default value to return if entry corresponding to the given key not found. By default the given key will be used as default value.  
 ##### Returns
 *String* : Message resource property value corresponding to the key. If entry doesn't exist, then default value will be returned.
 
