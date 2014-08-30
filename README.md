@@ -119,7 +119,7 @@ Initialize messageResource.js with configuration options.
 ##### Parameters
 **config** *Object* : Object with configuration options.  
 ##### Available configuration options  
-**filePath** *String* : Path(directory) containing message resource files to be loaded.  
+**filePath** *String* : Path(directory) containing message resource files to be loaded. Default value is empty string and it points to the same path as that of html file. 
 **fileExtension** *String* : File extension of message resource files. Default value is *.properties*.   
 **defaultLocale** *String* : Default locale to be used. Default value is *en_US*.  
 **fileNameResolver** *Function* : Specify custom file name resolver. Default file name resolver will be used if not specified.  
@@ -128,10 +128,15 @@ Initialize messageResource.js with configuration options.
 
 ----------------------
 
-#### messageResource.load([module], [locale], [callback])
-Loads a message resource file. The file name is constructed based on the given module name and locale.
+#### messageResource.setCurrentLocale(locale)
+Set current locale to be used. This configured locale will be used by *load* and *get* functions if locale not specified. If current locale is not set then default locale will be used as current locale.
+##### Parameters
+**locale** *String* : Locale identifier like en_US.
 
-File name is constructed with default configuration in different cases as follows : 
+----------------------
+
+#### messageResource.load([module], [locale], [callback])
+Loads a message resource file. The file name is constructed based on the given module name and locale. File name is constructed with default configuration in different cases as follows : 
 * case 1 : Module name and locale empty or null, then the file name will be *_default.properties*. 
 * case 2 : Module name *HomePage* and locale empty, then file name will be *HomePage.properties*.
 * case 3 : Module name empty and locale *en_US*, then file name will be *_default_en_US.properties*.
@@ -139,8 +144,20 @@ File name is constructed with default configuration in different cases as follow
 
 ##### Parameters
 **module** *String* | *Array* : Module name or list of module names. Default value is *_default*.  
-**locale** *String* : Locale identifier like en_US. Current locale will be used if not given.  
+**locale** *String* : Locale identifier like en_US. Current locale will be used as default.  
 **callback** *Function* : Callback to be executed after loading message resource.
+
+-----------------------
+
+#### messageResource.get(key, [module], [locale], [defaultValue])
+Get value of a property from loaded message resource files.
+##### Parameters
+**key** *String* : Message resource property key.  
+**module** *String* : Module name. Default value is *_default*.  
+**locale** *String* : Locale identifier like en_US. Current locale will be used as default.  
+**defaultValue** *String* : Default value to return if value for the given key not found. By default the given key will be used as default value.  
+##### Returns
+*String* : Message resource property value corresponding to the key. If entry doesn't exist, then default value will be returned.
 
 -----------------------
 
