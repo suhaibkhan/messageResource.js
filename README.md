@@ -111,7 +111,7 @@ messageResource.init({
 
 #### messageResource 
 messageResource variable is added to the global scope.
-
+----------------
 #### messageResource.init([config])
 Initialize messageResource.js with configuration options.
 ##### Parameters
@@ -123,7 +123,7 @@ Initialize messageResource.js with configuration options.
 **fileNameResolver** *Function* : Specify custom file name resolver. Default file name resolver will be used if not specified.  
 **ajaxFunction** *Function* : Specify custom ajax function for loading files. The function should accept only 2 arguments, url/path of the file and callback with response text as argument. Default ajax function will be used if not specified.  
 **debugMode** *Boolean* : Enable or disable debug mode. Default value is *false*.
-
+----------------------
 #### messageResource.load([module], [locale], [callback])
 Loads a message resource file. The file name is constructed based on the given module name and locale.
 
@@ -137,6 +137,6 @@ File name is constructed with default configuration in different cases as follow
 **module** *String* | *Array* : Module name or list of module names. Default value is *_default*.  
 **locale** *String* : Locale identifier like en_US. Current locale will be used if not given.  
 **callback** *Function* : Callback to be executed after loading message resource.
-
+-----------------------
 ## Copyright
 Copyright 2014 [Suhaib Khan](http://khansuhaib.wordpress.com/). See [MIT-LICENCE](https://github.com/suhaibkhan/messageResource.js/blob/master/LICENSE) for details.
