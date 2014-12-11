@@ -90,6 +90,9 @@
 				// split each line to key-value pair and
 				// save in properties
 				linesArray.forEach(function (line, index, array){
+					var keyValPair,
+						value = '';
+						
 					line = line.trim();
 					
 					// discard empty lines and lines 
@@ -98,9 +101,15 @@
 						return;
 					}
 					
-					var keyValPair = line.split('=');
-					if (keyValPair && keyValPair.length === 2){
-						curModuleMap[keyValPair[0].trim()] = keyValPair[1].trim();
+					keyValPair = line.split(/=(.+)?/);
+					if (keyValPair && keyValPair.length === 3){
+						if (keyValPair[1]){
+							// second value in keyValPair the can be undefined 
+							// when value in the file is empty
+							// eg: key = 
+							value = keyValPair[1].trim();
+						}
+						curModuleMap[keyValPair[0].trim()] = value;
 					}else{
 						log('Invalid line : ' + line);
 					}
@@ -400,7 +409,9 @@
 				// loaded return defaultValue or key which is valid.
 				if (isModuleLoaded(validModule, validLocale)){
 					moduleObj = properties[validLocale][validModule];
-					value = moduleObj[key] || value;
+					if (typeof moduleObj[key] !== 'undefined'){
+						value = moduleObj[key];
+					}
 				}
 				
 				return convertUnicodeString(value);
