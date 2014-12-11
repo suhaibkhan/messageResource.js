@@ -116,13 +116,14 @@ messageResource.init({
 3. Change to the project's root directory.
 4. Ensure that package.json and Gruntfile.js are in project's root directory.
 5. Install project dependencies with the following command.
-  ```
-  npm install
-  ```
+   ```
+   npm install
+   ```
 6. Run Grunt with the following command, which builds and places messageResource.js and messageResource.min.js in the dist directory.
-  ```
-  grunt
-  ```
+   ```
+   grunt
+   ```
+
 ## API
 
 #### messageResource 
