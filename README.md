@@ -107,6 +107,21 @@ messageResource.init({
 });
 
 ```
+## Building messageResource.js
+1. Ensure that [Node.js](www.nodejs.org) is installed.
+2. Run the following command to install Grunt's command line interface (CLI) globally, which adds grunt command in your system path.
+```
+npm install -g grunt-cli
+```
+3. Change to the project's root directory.
+4. Install project dependencies with the following command. Ensure that package.json and Gruntfile.js are in project's root directory.
+```
+npm install
+```
+Run Grunt with the following command, which builds messageResource.js, messageResource.min.js and placed in dist directory.
+```
+grunt
+```
 ## API
 
 #### messageResource 
