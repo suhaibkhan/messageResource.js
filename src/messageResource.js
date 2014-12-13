@@ -104,7 +104,7 @@
 					keyValPair = line.split(/=(.+)?/);
 					if (keyValPair && keyValPair.length === 3){
 						if (keyValPair[1]){
-							// second value in keyValPair the can be undefined 
+							// second value in keyValPair can be undefined 
 							// when value in the file is empty
 							// eg: key = 
 							value = keyValPair[1].trim();
@@ -420,9 +420,16 @@
 		
 	}());
 	
-	// set global 
-	if (!global.messageResource){
-		global.messageResource = messageResource;
+	// register as an AMD module
+	if ( typeof define === 'function' && define.amd ) {
+		define([], function() {
+			return messageResource;
+		});
+	}else{
+		// set global 
+		if (!global.messageResource){
+			global.messageResource = messageResource;
+		}
 	}
 	
 }(this));
