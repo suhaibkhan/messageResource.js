@@ -101,15 +101,15 @@
 						return;
 					}
 					
-					keyValPair = line.split(/=(.+)?/);
-					if (keyValPair && keyValPair.length === 3){
-						if (keyValPair[1]){
+					keyValPair = line.match(/([^=]*)=(.*)$/);
+					if (keyValPair && keyValPair[1]){
+						if (keyValPair[2]){
 							// second value in keyValPair can be undefined 
 							// when value in the file is empty
 							// eg: key = 
-							value = keyValPair[1].trim();
+							value = keyValPair[2].trim();
 						}
-						curModuleMap[keyValPair[0].trim()] = value;
+						curModuleMap[keyValPair[1].trim()] = value;
 					}else{
 						log('Invalid line : ' + line);
 					}
@@ -178,8 +178,8 @@
 		 */
 		function log(msg, doAlert){
 			// log message to console if debug mode enabled.
-			if (debugMode && console && console.log){
-				console.log('messageResource.js : ' + msg);
+			if (debugMode && global.console && global.console.log){
+				global.console.log('messageResource.js : ' + msg);
 			}
 			// alert messages if needed
 			if (doAlert === true){
