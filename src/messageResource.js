@@ -97,7 +97,7 @@
 					
 					// discard empty lines and lines 
 					// starting with #, which is considered as a comment
-					if (line === '' || line[0] === '#'){
+					if (line === '' || line.charAt(0) === '#'){
 						return;
 					}
 					
@@ -241,13 +241,13 @@
 				
 				// append '/' to file path if not exists
 				filePath = config.filePath || '';
-				if (filePath && filePath[filePath.length - 1] !== '/'){
+				if (filePath && filePath.charAt(filePath.length - 1) !== '/'){
 					filePath = filePath + '/';
 				}
 				
 				// prepend '.' to file extension if not exists
 				fileExtension = config.fileExtension || DEFAULT_EXTENSION;
-				if (fileExtension[0] !== '.'){
+				if (fileExtension.charAt(0) !== '.'){
 					fileExtension = '.' + fileExtension;
 				}
 
