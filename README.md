@@ -1,5 +1,6 @@
 #messageResource.js
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 **messageResource.js** is a simple JavaScript library for reading message resource property files of following format.
 ```
 #example.properties
