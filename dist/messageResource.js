@@ -1,6 +1,6 @@
 /**
  * @license
- * messageResource.js - v1.0
+ * messageResource.js - v1.1
  * Copyright (c) 2014, Suhaib Khan
  * http://khansuhaib.wordpress.com
  *
@@ -10,7 +10,7 @@
  
 /**
  * @author Suhaib Khan http://khansuhaib.wordpress.com
- * @version 1.0
+ * @version 1.1
  */
 (function(global){
 	'use strict';
