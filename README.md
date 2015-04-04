@@ -1,6 +1,7 @@
-#messageResource.js [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-
+#messageResource.js 
 [![Join the chat at https://gitter.im/suhaibkhan/messageResource.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/suhaibkhan/messageResource.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 **messageResource.js** is a simple JavaScript library for reading message resource property files of following format.
 ```
 #example.properties
